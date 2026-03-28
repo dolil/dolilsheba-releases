@@ -66,8 +66,8 @@ Visit [dolilsheba.com](https://dolilsheba.com) for more details.
 Having trouble? We're here to help.
 
 - 🌐 Website: [dolilsheba.com](https://dolilsheba.com)
+- 📧 Email: [dolilsheba@gmail.com](mailto:dolilsheba@gmail.com)
 - 📧 Email: [info@dolilsheba.com](mailto:info@dolilsheba.com)
-- 📞 Phone: +880 1331-513561
 
 ## About
 
