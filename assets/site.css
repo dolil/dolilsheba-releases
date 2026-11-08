@@ -297,6 +297,14 @@ footer { border-top: 1px solid var(--border); margin-top: 0; padding: 26px 0 22p
 .foot-brand p { margin: 10px 0 0; max-width: 360px; }
 .disclaimer { margin: 20px 0 0; padding-top: 14px; border-top: 1px solid var(--border); font-size: 12.5px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
+/* "Scan to download" QR — only for visitors on a computer; phones get the button instead */
+.qr-box { display: none; align-items: center; gap: 14px; margin-top: 14px; padding: 12px 14px; border: 1px dashed var(--border-strong); border-radius: 12px; background: #fff; text-align: left; }
+.qr-box img { width: 108px; height: 108px; flex-shrink: 0; border-radius: 6px; }
+.qr-box b { display: block; font-size: 14.5px; color: var(--text); margin-bottom: 2px; }
+.qr-box span { display: block; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+@media (min-width: 721px) and (hover: hover) and (pointer: fine) { .qr-box { display: flex; } }
+.is-android .qr-box { display: none !important; }
+
 /* ── Responsive ── */
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
