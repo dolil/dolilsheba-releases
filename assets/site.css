@@ -288,7 +288,7 @@ section.block.alt { background: var(--surface-alt); border-top: 1px solid var(--
 .cta .get.ghost:hover { background: rgba(255, 255, 255, 0.08); }
 
 /* Footer */
-footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 26px 0 22px; font-size: 13.5px; color: var(--muted); background: #fbfcfb; }
+footer { border-top: 1px solid var(--border); margin-top: 0; padding: 26px 0 22px; font-size: 13.5px; color: var(--muted); background: #fbfcfb; }
 .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; }
 .foot-grid h4 { margin: 0 0 10px; font-size: 14px; color: var(--text); }
 .foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
