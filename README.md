@@ -19,6 +19,8 @@
 <p align="center">
   <a href="https://dolil.github.io/dolilsheba-releases/"><strong>Download Page</strong></a>
   &nbsp;·&nbsp;
+  <a href="https://dolil.github.io/dolilsheba-releases/mobile-app/">Mobile App</a>
+  &nbsp;·&nbsp;
   <a href="https://dolilsheba.com">Website</a>
   &nbsp;·&nbsp;
   <a href="https://github.com/dolil/dolilsheba-releases/releases">Release History</a>
@@ -31,7 +33,7 @@
 | Component | Platform | Download |
 |---|---|---|
 | **Desktop Software** | Windows 10 / 11 (64-bit) | [**Windows Installer (.exe)**](https://dolil.github.io/dolilsheba-releases/) |
-| **Mobile Application** | Android 7.0 or later | [**Android Application (.apk)**](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk) |
+| **Mobile Application** | Android 7.0 or later | [**Android Application (.apk)**](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk) · [details](https://dolil.github.io/dolilsheba-releases/mobile-app/) |
 
 The [download page](https://dolil.github.io/dolilsheba-releases/) always provides the latest
 version of both components, together with their release notes.
@@ -44,14 +46,21 @@ The primary application for deed preparation, designed for deed writers, legal p
 real estate firms and banking institutions.
 
 - **AI-assisted data entry:** party and land details are populated automatically from scanned documents
-- **32 deed types**, with prepared templates for all commonly used property deeds
-- Print-ready output in the appropriate legal format
-- **Offline operation:** deeds can be prepared and printed without an internet connection;
-  connectivity is required only for licensing and synchronisation
-- Synchronisation of **নকল, তল্লাশ ও এলটি নোটিশ** between the desktop and the web platform
+- **More than 35 deed types** across transfer, power of attorney, agreement and mortgage, cancellation,
+  declaration, lease and trust categories (e.g. সাফ-কবলা, দানপত্র, হেবা, বণ্টননামা, বায়নাপত্র)
+- **তল্লাশ/পরিদর্শন (ফরম ১৫৩৫), নকল (ফরম ১৫৮০) and এলটি নোটিশ (ফরম নং-৪)** with fee statements
+- Direct printing on stamp paper, stamp + cartridge, full cartridge and certified-copy layouts;
+  the installer adds a "Stamp Paper" page size to Windows
+- "দ্রুত দলিল" single-page entry, a step-by-step deed wizard, and Bijoy-encoded text paste
+- **Offline operation:** after the first sign-in on a computer, deeds and applications can be
+  prepared, edited and draft-printed without an internet connection; final prints work offline with
+  offline credit or an activated lifetime package. Changes sync automatically once online
+- Cloud sync of deeds, **তল্লাশ, নকল ও এলটি নোটিশ** across computers and the web app (one account)
 - Mouza and deed-writer directories are kept current from the server automatically
-- All deed records are stored locally on the user's computer
-- **Automatic updates:** new versions are downloaded and installed in a single step
+- All deed records are stored locally, with automatic daily backups, a restore wizard and optional
+  Google Drive backup of PDFs
+- **Automatic updates:** checked at launch and every six hours, downloaded in the background and
+  installed when the application closes
 
 ### Mobile Application (Android)
 
@@ -63,9 +72,15 @@ for manual data entry.
 - **Direct transfer to the desktop:** names, addresses, দাগ and খতিয়ান numbers are extracted
   and delivered to the corresponding step of the open deed, where the user reviews them and
   confirms with **যোগ করুন**
-- **Reference services:** market values, mouza directory, laws and regulations, sample forms,
-  office directory and document verification
-- Automatic updates from the official release channel
+- **QR verification of the land record:** for a দাখিলা or নামজারি খতিয়ান, the app checks the matching online
+  record and marks each paper as genuine, fake or unverifiable
+- **Document verification:** QR-based checks for 10 document types, including দাখিলা, খতিয়ান ও নামজারি,
+  এ-চালান, ই-রিটার্ন, দলিল and জন্ম ও মৃত্যু নিবন্ধন
+- **Reference services:** market values, mouza directory, 359 land classes, laws and regulations,
+  sample forms, a 700+ page registration manual, দলিল পেডিয়া and the office directory
+- Sign-in with mobile number and OTP; automatic updates verified by SHA-256
+
+See the [mobile app page](https://dolil.github.io/dolilsheba-releases/mobile-app/) for full details.
 
 ### Workflow
 
@@ -82,9 +97,11 @@ for manual data entry.
 
 1. Open the [download page](https://dolil.github.io/dolilsheba-releases/) and select
    **Windows সংস্করণ ডাউনলোড করুন**. The installer is named `dolilsheba-Setup-x.y.z.exe`.
-2. Run the installer and follow the on-screen instructions.
-3. If Windows displays **"Windows protected your PC"**, select **More info → Run anyway**.
-4. Launch the software from the desktop shortcut and sign in.
+2. Run the installer. The installer is not yet code-signed, so if Windows displays
+   **"Windows protected your PC"**, select **More info → Run anyway**.
+3. Approve the administrator prompt; the installation folder may be changed if required.
+4. Launch the software from the **"দলিল সেবা"** desktop shortcut and sign in. New users register
+   with a mobile number verified by OTP.
 
 ### Android
 
@@ -92,8 +109,9 @@ for manual data entry.
    [Android application](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk).
 2. Open the downloaded file. On first installation, Android requests permission to
    **install from this source**; grant the permission and select **Install**.
-3. Launch the application, sign in, and scan the QR code shown in the **মোবাইল স্ক্যান**
-   section of the desktop software to link the device to a deed.
+3. The application installs as **"দলিল সেবা"**. Sign in with a mobile number and OTP, open
+   **দলিলসেবা AI** from the menu, and scan the QR code shown in the **মোবাইল স্ক্যান** section of
+   the deed on the desktop.
 
 ## System Requirements
 
@@ -101,16 +119,16 @@ for manual data entry.
 |---|---|---|
 | Operating system | Windows 10 or 11, 64-bit | Android 7.0 or later |
 | Storage | Approximately 200 MB | Approximately 90 MB (download) |
-| Internet | Sign-in, licensing, synchronisation and updates | Document scanning and transfer to the desktop |
+| Internet | Registration, credit purchase, AI scanning, synchronisation and updates | Sign-in, AI scanning, verification and most reference services |
 
 ## Updates
 
 Both components check for new versions automatically.
 
-- **Desktop software:** an update notification is shown within the application. Updates may
-  also be checked manually via **Help → Check for Updates**.
-- **Mobile application:** the user is notified when a new version is available, and the update
-  is installed from the official release channel.
+- **Desktop software:** checks at launch and every six hours, downloads in the background and
+  installs on exit. Updates may also be checked manually via **আপডেট ও সিঙ্ক → সিস্টেম আপডেট**.
+- **Mobile application:** shows "নতুন আপডেট পাওয়া গেছে" when a new version is available and installs
+  it after verifying its SHA-256. Updates may also be checked via **আপডেট খুঁজুন** in the menu.
 
 Release notes for each version are published on the
 [desktop releases](https://github.com/dolil/dolilsheba-releases/releases) and
@@ -161,5 +179,6 @@ as anonymous API access is limited to 60 requests per hour per IP address.
 
 <p align="center">
   Developed and maintained by <strong>Upakul Dolil Sheba</strong>, Sylhet, Bangladesh.<br>
-  <sub>© 2024–2026 Upakul Dolil Sheba. All rights reserved.</sub>
+  <sub>© 2024–2026 Upakul Dolil Sheba. All rights reserved.<br>
+  Dolil Sheba is a private service and is not affiliated with the Government of Bangladesh or any of its agencies.</sub>
 </p>

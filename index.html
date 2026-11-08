@@ -4,10 +4,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম (SDMS) — ডাউনলোড</title>
-<meta name="description" content="Smart Deed Management System (SDMS) — স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেমের ডেস্কটপ সফটওয়্যার (Windows) ও মোবাইল অ্যাপ (Android) ডাউনলোড করুন। কৃত্রিম বুদ্ধিমত্তা (AI) নির্ভর দলিল প্রস্তুতি — নথি স্ক্যান, স্বয়ংক্রিয় তথ্য সন্নিবেশ ও মুদ্রণ।" />
+<meta name="description" content="Smart Deed Management System (SDMS) — কৃত্রিম বুদ্ধিমত্তা (AI) নির্ভর দলিল প্রস্তুতি। ৩৫টিরও বেশি ধরনের দলিল, তল্লাশ, নকল ও এলটি নোটিশ — সম্পূর্ণ অফলাইনে। Windows ডেস্কটপ সফটওয়্যার ও Android অ্যাপ ডাউনলোড করুন।" />
 <meta name="theme-color" content="#16a34a" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="Smart Deed Management System (SDMS) — স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম" />
-<meta property="og:description" content="AI-চালিত দলিল সফটওয়্যার — ডেস্কটপ (Windows) ও মোবাইল অ্যাপ (Android) ডাউনলোড করুন।" />
+<meta property="og:description" content="AI-নির্ভর দলিল প্রস্তুতি — Windows ডেস্কটপ সফটওয়্যার ও Android মোবাইল অ্যাপ।" />
 <meta property="og:image" content="https://dolil.github.io/dolilsheba-releases/apple-touch-icon.png" />
 <link rel="icon" href="favicon.ico" sizes="32x32" />
 <link rel="icon" href="logo.svg" type="image/svg+xml" />
@@ -15,269 +16,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" />
-<style>
-  :root {
-    --bg: #ffffff;
-    --surface: #ffffff;
-    --surface-alt: #f6faf7;
-    --border: #e3e8ea;
-    --border-strong: #cfd8d3;
-    --text: #0f1f17;
-    --muted: #5b6b62;
-    --green: #16a34a;
-    --green-dark: #15803d;
-    --green-deep: #14532d;
-    --green-soft: #dcfce7;
-    --green-tint: #f0fdf4;
-    --shadow-sm: 0 1px 2px rgba(15, 31, 23, 0.05);
-    --shadow-md: 0 6px 24px rgba(22, 163, 74, 0.10);
-    --radius: 14px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: "Noto Sans Bengali", "Nirmala UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; }
-  svg { flex-shrink: 0; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-
-  /* ── Nav ── */
-  .nav {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(1.4) blur(8px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; height: 56px; }
-  .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; }
-  .brand img { width: 34px; height: 34px; }
-  .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-  .brand-text b { font-size: 15.5px; letter-spacing: 0.4px; }
-  .brand-text span { font-size: 11.5px; color: var(--muted); font-weight: 500; }
-  .nav-links { display: flex; align-items: center; gap: 18px; }
-  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 500; }
-  .nav-links a:hover { color: var(--green-dark); }
-  .nav-links .nav-cta {
-    color: #fff; background: var(--green); padding: 6px 12px; border-radius: 8px; font-weight: 600;
-  }
-  .nav-links .nav-cta:hover { color: #fff; background: var(--green-dark); }
-
-  /* ── Hero ── */
-  .hero {
-    background:
-      radial-gradient(900px 340px at 50% -80px, rgba(22, 163, 74, 0.13), transparent 70%),
-      linear-gradient(#fff, var(--surface-alt));
-    border-bottom: 1px solid var(--border);
-    padding: 40px 0 44px;
-  }
-  .hero-head { text-align: center; max-width: 640px; margin: 0 auto 28px; }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: #fff; color: var(--green-dark); border: 1px solid var(--green-soft);
-    font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 999px; margin-bottom: 14px;
-  }
-  .eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
-  .hero h1 { margin: 0 0 10px; font-size: 34px; font-weight: 800; line-height: 1.3; letter-spacing: -0.01em; }
-  .hero h1 em { font-style: normal; color: var(--green); display: block; }
-  .hero-head p { margin: 0 auto; color: var(--muted); font-size: 15.5px; max-width: 540px; }
-
-  /* Download cards — side by side */
-  .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 900px; margin: 0 auto; }
-  .dl-card {
-    position: relative; display: flex; flex-direction: column;
-    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-    padding: 22px 22px 18px; box-shadow: var(--shadow-md);
-  }
-  .dl-card.for-you { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-soft), var(--shadow-md); }
-  .for-you-tag {
-    display: none; position: absolute; top: -11px; left: 20px;
-    background: var(--green); color: #fff; font-size: 11.5px; font-weight: 600;
-    padding: 2px 10px; border-radius: 999px;
-  }
-  .dl-card.for-you .for-you-tag { display: inline-block; }
-  .dl-head { display: flex; align-items: center; gap: 12px; }
-  .dl-icon {
-    width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
-    background: var(--green-tint); color: var(--green-dark); border: 1px solid var(--green-soft);
-  }
-  .dl-title { flex: 1; min-width: 0; }
-  .dl-kind { margin: 0; font-size: 12.5px; color: var(--muted); font-weight: 600; }
-  .dl-title h2 { margin: 0; font-size: 19px; line-height: 1.3; }
-  .ver-pill {
-    font-size: 12px; font-weight: 700; color: var(--green-dark); background: var(--green-tint);
-    border: 1px solid var(--green-soft); border-radius: 999px; padding: 2px 10px; white-space: nowrap;
-  }
-  .ver-pill:empty { display: none; }
-  .dl-desc { margin: 14px 0 10px; font-size: 14px; color: var(--muted); }
-  .checks { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 7px; }
-  .checks li { display: flex; gap: 9px; font-size: 14px; align-items: flex-start; }
-  .checks svg { color: var(--green); margin-top: 3px; }
-  .dl-card .spacer { flex: 1; }
-  .btn {
-    display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%;
-    background: var(--green); color: #fff; padding: 13px 18px; border-radius: 10px;
-    font-size: 15.5px; font-weight: 700; text-decoration: none; border: 1px solid var(--green);
-    transition: background 0.15s, transform 0.05s, box-shadow 0.15s; box-shadow: var(--shadow-sm);
-  }
-  .btn:hover { background: var(--green-dark); border-color: var(--green-dark); box-shadow: var(--shadow-md); }
-  .btn:active { transform: translateY(1px); }
-  .dl-meta { margin: 9px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
-  .dl-notes { margin-top: 12px; border-top: 1px solid var(--border); padding-top: 10px; }
-  .dl-notes summary {
-    cursor: pointer; font-size: 13px; font-weight: 600; color: var(--green-dark); list-style: none;
-    display: flex; align-items: center; gap: 6px;
-  }
-  .dl-notes summary::-webkit-details-marker { display: none; }
-  .dl-notes summary::before { content: "▸"; transition: transform 0.15s; }
-  .dl-notes[open] summary::before { transform: rotate(90deg); }
-  .notes {
-    margin-top: 8px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 8px;
-    padding: 8px 14px; font-size: 13px; color: #2a3a32; word-wrap: break-word;
-    max-height: 220px; overflow-y: auto;
-  }
-  .notes h4 { font-size: 13px; margin: 8px 0 2px; }
-  .notes ul { margin: 2px 0 6px; padding-left: 18px; }
-  .notes li { margin: 2px 0; }
-  .notes p { margin: 4px 0; }
-  .notes code { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; }
-  .sha { display: block; font-family: ui-monospace, Consolas, monospace; font-size: 10.5px; color: var(--muted); word-break: break-all; margin-top: 8px; }
-  .hero-foot { text-align: center; margin: 18px 0 0; font-size: 13px; color: var(--muted); }
-  .hero-foot a { color: var(--green-dark); font-weight: 600; text-decoration: none; }
-  .hero-foot a:hover { text-decoration: underline; }
-
-  /* ── Sections ── */
-  section.block { padding: 56px 0; }
-  section.block.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .sec-head { text-align: center; max-width: 620px; margin: 0 auto 32px; }
-  .chip {
-    display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700;
-    color: var(--green-dark); background: var(--green-soft); padding: 3px 11px; border-radius: 999px;
-  }
-  .sec-head h2 { margin: 10px 0 8px; font-size: 26px; line-height: 1.35; }
-  .sec-head p { margin: 0; color: var(--muted); font-size: 15px; }
-
-  /* Pairing illustration: phone ··· AI ··· computer */
-  .pair {
-    display: flex; align-items: center; justify-content: center; gap: 0;
-    max-width: 560px; margin: 0 auto 36px;
-  }
-  .pair-node { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
-  .pair-node .dev {
-    width: 68px; height: 68px; border-radius: 18px; display: grid; place-items: center;
-    background: #fff; border: 1px solid var(--border-strong); color: var(--green-dark); box-shadow: var(--shadow-sm);
-  }
-  .pair-line { flex: 1; position: relative; height: 2px; margin: 0 10px 26px; min-width: 50px;
-    background-image: linear-gradient(90deg, var(--green) 50%, transparent 50%);
-    background-size: 12px 2px; animation: flow 1.2s linear infinite;
-  }
-  @keyframes flow { to { background-position: 12px 0; } }
-  @media (prefers-reduced-motion: reduce) { .pair-line { animation: none; } }
-  .pair-ai {
-    width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; margin-bottom: 26px;
-    background: var(--green); color: #fff; font-weight: 800; font-size: 15px;
-    box-shadow: 0 0 0 6px var(--green-soft);
-  }
-
-  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .step {
-    background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px;
-    position: relative;
-  }
-  .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-  .step-ico {
-    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
-    border: 1.5px solid var(--green); color: var(--green-dark); background: #fff;
-  }
-  .step.last .step-ico { background: var(--green); color: #fff; }
-  .step-num { font-size: 12px; font-weight: 700; color: var(--muted); }
-  .where {
-    display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 600;
-    padding: 1px 8px; border-radius: 999px; background: var(--green-tint); color: var(--green-dark);
-  }
-  .where.pc { background: #f1f5f4; color: #3d4b44; border: 1px solid var(--border); }
-  .step h3 { margin: 8px 0 4px; font-size: 15.5px; line-height: 1.4; }
-  .step p { margin: 0; font-size: 13.5px; color: var(--muted); }
-
-  /* Features */
-  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .feat { border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; background: #fff; }
-  .feat .f-ico {
-    width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
-    background: var(--green-tint); color: var(--green-dark); margin-bottom: 10px;
-  }
-  .feat h3 { margin: 0 0 4px; font-size: 15px; }
-  .feat p { margin: 0; font-size: 13.5px; color: var(--muted); }
-  .feat .on { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 600; color: var(--muted);
-    border: 1px solid var(--border); border-radius: 999px; padding: 0 8px; }
-
-  /* Install */
-  .install { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .inst { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; }
-  .inst h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 12px; font-size: 16.5px; }
-  .inst h3 svg { color: var(--green-dark); }
-  .inst ol { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 10px; }
-  .inst li { counter-increment: s; display: flex; gap: 11px; font-size: 14px; }
-  .inst li::before {
-    content: counter(s, bengali); flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
-    display: grid; place-items: center; font-size: 12px; font-weight: 700;
-    background: var(--green-tint); color: var(--green-dark); border: 1px solid var(--green-soft); margin-top: 1px;
-  }
-  .inst .req { margin: 14px 0 0; padding-top: 12px; border-top: 1px dashed var(--border); font-size: 12.5px; color: var(--muted); }
-
-  /* CTA band */
-  .cta {
-    background: linear-gradient(135deg, var(--green-dark), var(--green-deep));
-    color: #fff; border-radius: 18px; padding: 34px 28px; text-align: center;
-  }
-  .cta h2 { margin: 0 0 6px; font-size: 24px; }
-  .cta p { margin: 0 0 20px; opacity: 0.85; font-size: 14.5px; }
-  .cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .cta .btn { width: auto; min-width: 230px; background: #fff; color: var(--green-deep); border-color: #fff; }
-  .cta .btn:hover { background: var(--green-tint); }
-  .cta .btn.ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.6); }
-  .cta .btn.ghost:hover { background: rgba(255, 255, 255, 0.1); }
-
-  footer { border-top: 1px solid var(--border); margin-top: 56px; padding: 26px 0 32px; font-size: 13px; color: var(--muted); }
-  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  footer a { color: var(--green-dark); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  footer .links { display: flex; gap: 16px; flex-wrap: wrap; }
-
-  /* ── Responsive ── */
-  @media (max-width: 900px) {
-    .steps { grid-template-columns: 1fr 1fr; }
-    .features { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 720px) {
-    .wrap { padding: 0 16px; }
-    .nav-links a:not(.nav-cta) { display: none; }
-    .hero { padding: 28px 0 32px; }
-    .hero h1 { font-size: 26px; }
-    .hero-head p { font-size: 14.5px; }
-    .dl-grid, .install { grid-template-columns: 1fr; }
-    .dl-grid { gap: 22px; }
-    .android .dl-card.mobile { order: -1; }
-    section.block { padding: 40px 0; }
-    .sec-head h2 { font-size: 22px; }
-    .steps, .features { grid-template-columns: 1fr; }
-    .pair-node .dev { width: 56px; height: 56px; }
-    .pair-ai { width: 48px; height: 48px; font-size: 13px; }
-    .cta { padding: 28px 18px; }
-    .cta .btn { width: 100%; min-width: 0; }
-  }
-</style>
+<link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
 
-<!-- Inline icon sprite (outline style) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-windows" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3zM11.5 4.3 21 3v8.5h-9.5zM3 12.5h7.5v7.1L3 18.5zM11.5 12.5H21V21l-9.5-1.3z"/></symbol>
+    <symbol id="i-android" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.2c-1.77 0-3.43.38-4.92.94L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></symbol>
     <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
@@ -286,10 +33,14 @@
     <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
     <symbol id="i-doc-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></symbol>
     <symbol id="i-docs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M10 8h4M10 12h4"/><path d="M4 7v12a2 2 0 0 0 2 2h9"/></symbol>
-    <symbol id="i-offline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.7 11.1A10.9 10.9 0 0 1 19 12.6M5 12.6a10.9 10.9 0 0 1 5.2-2.5M10.7 5.1A16 16 0 0 1 22.6 9M1.4 9a16 16 0 0 1 4.4-2.7M8.5 16.1a5 5 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
     <symbol id="i-sync" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
     <symbol id="i-update" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M5 11l7 7 7-7"/><path d="M5 22h14"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
   </defs>
@@ -299,158 +50,146 @@
   <div class="wrap">
     <a class="brand" href="./">
       <img src="logo.svg" alt="" width="34" height="34" />
-      <span class="brand-text">
-        <b>SDMS</b>
-        <span>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম</span>
-      </span>
+      <span class="brand-text"><b>SDMS</b><span>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম</span></span>
     </a>
     <div class="nav-links">
       <a href="#how">কার্যপদ্ধতি</a>
       <a href="#features">বৈশিষ্ট্য</a>
-      <a href="#install">ইনস্টলেশন</a>
-      <a href="https://dolilsheba.com" target="_blank" rel="noopener">ওয়েবসাইট</a>
+      <a href="mobile-app/">মোবাইল অ্যাপ</a>
+      <a href="#faq">জিজ্ঞাসা</a>
       <a class="nav-cta" href="#download">ডাউনলোড</a>
     </div>
   </div>
 </nav>
 
-<!-- ═══ Hero: the two downloads, side by side ═══ -->
-<header class="hero" id="download">
-  <div class="wrap">
-    <div class="hero-head">
+<!-- ═══ Hero: headline + compact download buttons ═══ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
       <span class="eyebrow"><svg width="13" height="13"><use href="#i-spark"/></svg>AI-চালিত &middot; Smart Deed Management System (SDMS)</span>
       <h1>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম <em>ডাউনলোড করুন</em></h1>
-      <p><b>কৃত্রিম বুদ্ধিমত্তা (AI) নির্ভর দলিল প্রস্তুতি — নথি স্ক্যান, স্বয়ংক্রিয় তথ্য সন্নিবেশ ও মুদ্রণ।</b> জাতীয় পরিচয়পত্র, দাখিলা ও খতিয়ান থেকে প্রয়োজনীয় তথ্য স্বয়ংক্রিয়ভাবে সংগৃহীত হয়ে সরাসরি দলিলে যুক্ত হয়; পৃথকভাবে টাইপ করার প্রয়োজন হয় না।</p>
+      <p class="lead">কৃত্রিম বুদ্ধিমত্তা (AI) নির্ভর দলিল প্রস্তুতি — নথি স্ক্যান, স্বয়ংক্রিয় তথ্য সন্নিবেশ ও মুদ্রণ।</p>
+      <p class="sub">সাব-রেজিস্ট্রি অফিসে দাখিলযোগ্য দলিল, তল্লাশ, নকল ও এলটি নোটিশ প্রস্তুতের পেশাদার সফটওয়্যার। মোবাইল অ্যাপে জাতীয় পরিচয়পত্র ও জমির কাগজ স্ক্যান করলে তথ্য সরাসরি কম্পিউটারের দলিলে যুক্ত হয়।</p>
+
+      <div class="get-btns">
+        <a class="get primary" data-dl="desktop" data-primary-for="windows" href="https://github.com/dolil/dolilsheba-releases/releases/latest">
+          <span class="g-ico"><svg width="18" height="18"><use href="#i-windows"/></svg></span>
+          <span class="g-txt"><small>Windows ১০ / ১১ (64-bit)</small><b>ডেস্কটপ সফটওয়্যার</b></span>
+        </a>
+        <a class="get" data-dl="mobile" data-primary-for="android" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk">
+          <span class="g-ico"><svg width="18" height="18"><use href="#i-android"/></svg></span>
+          <span class="g-txt"><small>Android ৭.০ বা তদূর্ধ্ব</small><b>মোবাইল অ্যাপ</b></span>
+        </a>
+      </div>
+      <p class="get-meta">
+        ডেস্কটপ <b data-ver="desktop"></b> &middot; মোবাইল <b data-ver="mobile"></b> &middot; বিনামূল্যে ডাউনলোড &middot;
+        <a class="link-arrow" href="#download" style="font-size:12.5px">বিস্তারিত ও প্রয়োজনীয়তা</a>
+      </p>
+
+      <div class="stats">
+        <div class="stat"><b>৩৫+</b><span>ধরনের দলিল</span></div>
+        <div class="stat"><b>অফলাইন</b><span>দলিল প্রস্তুত ও মুদ্রণ</span></div>
+        <div class="stat"><b>AI স্ক্যান</b><span>NID, খতিয়ান ও দাখিলা</span></div>
+        <div class="stat"><b>ক্লাউড সিঙ্ক</b><span>ডেস্কটপ, ওয়েব ও মোবাইল</span></div>
+      </div>
     </div>
 
-    <div class="dl-grid">
-      <!-- Desktop -->
-      <article class="dl-card desktop" id="card-desktop">
-        <span class="for-you-tag">আপনার কম্পিউটারের উপযোগী</span>
-        <div class="dl-head">
-          <span class="dl-icon"><svg width="24" height="24"><use href="#i-monitor"/></svg></span>
-          <div class="dl-title">
-            <p class="dl-kind">ডেস্কটপ সফটওয়্যার</p>
-            <h2>Windows</h2>
+    <!-- Illustration: deed wizard on the desktop receiving data scanned on the phone -->
+    <div class="mock" aria-hidden="true">
+      <div class="mock-win">
+        <div class="mock-bar"><i></i><i></i><i></i><span>দলিল সেবা — SDMS</span></div>
+        <div class="mock-body">
+          <div class="mock-side">
+            <b>SDMS</b>
+            <span>ড্যাশবোর্ড</span>
+            <span class="on">সকল দলিলসমূহ</span>
+            <span>তল্লাশ ও নকল</span>
+            <span>এলটি নোটিশ</span>
+            <span>আপডেট ও সিঙ্ক</span>
           </div>
-          <span class="ver-pill" id="ver-desktop"></span>
-        </div>
-        <p class="dl-desc">দলিল প্রস্তুত, মুদ্রণ ও সংরক্ষণের মূল সফটওয়্যার।</p>
-        <ul class="checks">
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>AI-এর মাধ্যমে দাতা-গ্রহীতা ও জমির তথ্য স্বয়ংক্রিয় পূরণ</li>
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>৩২ ধরনের দলিলের প্রস্তুতকৃত টেমপ্লেট</li>
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>ইন্টারনেট সংযোগ ছাড়াই দলিল প্রস্তুত ও মুদ্রণ</li>
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>স্বয়ংক্রিয় হালনাগাদ ব্যবস্থা</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn" data-dl="desktop" href="https://github.com/dolil/dolilsheba-releases/releases/latest">
-          <svg width="18" height="18"><use href="#i-download"/></svg>
-          Windows সংস্করণ ডাউনলোড করুন
-        </a>
-        <p class="dl-meta" id="meta-desktop">Windows 10 / 11 &middot; 64-bit</p>
-        <details class="dl-notes" id="notes-desktop" hidden>
-          <summary>এই সংস্করণের পরিবর্তনসমূহ</summary>
-          <div class="notes"></div>
-        </details>
-      </article>
-
-      <!-- Mobile -->
-      <article class="dl-card mobile" id="card-mobile">
-        <span class="for-you-tag">আপনার ফোনের উপযোগী</span>
-        <div class="dl-head">
-          <span class="dl-icon"><svg width="24" height="24"><use href="#i-phone"/></svg></span>
-          <div class="dl-title">
-            <p class="dl-kind">মোবাইল অ্যাপ</p>
-            <h2>Android</h2>
+          <div class="mock-main">
+            <div class="mock-title">সাফ-কবলা দলিল &middot; দাতার বিবরণ</div>
+            <div class="mock-steps"><i class="done"></i><i class="done"></i><i></i><i></i><i></i></div>
+            <div class="mock-field ai"><label>নাম</label><span class="val" style="--w:55%"></span><span class="ai-tag">AI</span></div>
+            <div class="mock-field ai"><label>পিতার নাম</label><span class="val" style="--w:48%"></span><span class="ai-tag">AI</span></div>
+            <div class="mock-field ai"><label>ঠিকানা</label><span class="val" style="--w:75%"></span><span class="ai-tag">AI</span></div>
+            <div class="mock-field"><label>পেশা</label><span class="val" style="--w:30%"></span><span></span></div>
+            <div class="mock-field ai"><label>খতিয়ান ও দাগ</label><span class="val" style="--w:40%"></span><span class="ai-tag">AI</span></div>
+            <div class="mock-inbox">মোবাইল স্ক্যান &middot; নতুন তথ্য এসেছে <em>যোগ করুন</em></div>
           </div>
-          <span class="ver-pill" id="ver-mobile"></span>
         </div>
-        <p class="dl-desc">নথি স্ক্যান করে তথ্য সরাসরি ডেস্কটপের দলিলে প্রেরণের সহায়ক অ্যাপ।</p>
-        <ul class="checks">
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>দলিলসেবা AI-এর মাধ্যমে NID, দাখিলা ও খতিয়ান স্ক্যান</li>
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>সংগৃহীত তথ্য সরাসরি ডেস্কটপের দলিলে প্রেরণ</li>
-          <li><svg width="14" height="14"><use href="#i-check"/></svg>বাজারমূল্য, মৌজা তালিকা, আইন ও নমুনা ফরম</li>
-        </ul>
-        <div class="spacer"></div>
-        <a class="btn" data-dl="mobile" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk">
-          <svg width="18" height="18"><use href="#i-download"/></svg>
-          Android অ্যাপ ডাউনলোড করুন
-        </a>
-        <p class="dl-meta" id="meta-mobile">Android ৭.০ বা তদূর্ধ্ব</p>
-        <details class="dl-notes" id="notes-mobile" hidden>
-          <summary>এই সংস্করণের পরিবর্তনসমূহ</summary>
-          <div class="notes"></div>
-          <span class="sha" id="sha-mobile"></span>
-        </details>
-      </article>
+      </div>
+      <div class="mock-phone">
+        <div class="mock-screen">
+          <div class="ph-head">দলিলসেবা AI</div>
+          <div class="ph-body">
+            <div class="scan-frame">
+              <div class="id-card"><span class="ph"></span><span class="ln"><i style="width:90%"></i><i style="width:70%"></i><i style="width:80%"></i></span></div>
+              <span class="scan-line"></span>
+            </div>
+            <div class="ph-chips"><span class="on">দাতার NID</span><span>গ্রহীতার NID</span><span>চৌহদ্দি</span><span>দাখিলা</span></div>
+            <div class="ph-btn">কম্পিউটারে সেন্ড করুন</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <p class="hero-foot">
-      ইনস্টলের পর উভয় সফটওয়্যার স্বয়ংক্রিয়ভাবে হালনাগাদ হয় &middot;
-      <a href="https://github.com/dolil/dolilsheba-releases/releases" target="_blank" rel="noopener">পূর্ববর্তী সংস্করণসমূহ</a>
-    </p>
   </div>
 </header>
 
-<!-- ═══ How the app and the desktop pair up (দলিলসেবা AI) ═══ -->
+<!-- ═══ How the AI app works with the desktop ═══ -->
 <section class="block" id="how">
   <div class="wrap">
     <div class="sec-head">
       <span class="chip"><svg width="13" height="13"><use href="#i-spark"/></svg>দলিলসেবা AI</span>
-      <h2>কৃত্রিম বুদ্ধিমত্তার মাধ্যমে স্বয়ংক্রিয় তথ্য পূরণ</h2>
-      <p>মোবাইল অ্যাপ ডেস্কটপ সফটওয়্যারের সাথে সংযুক্ত হয়ে কাজ করে। জাতীয় পরিচয়পত্র, খতিয়ান ও দাখিলা স্ক্যান করার পর AI প্রয়োজনীয় তথ্য শনাক্ত করে সংশ্লিষ্ট দলিলে প্রেরণ করে।</p>
+      <h2>মোবাইলে স্ক্যান, কম্পিউটারে দলিল</h2>
+      <p>মোবাইল অ্যাপ ডেস্কটপ সফটওয়্যারের সাথে সংযুক্ত হয়ে কাজ করে। নথি স্ক্যান করার পর AI প্রয়োজনীয় তথ্য শনাক্ত করে সংশ্লিষ্ট দলিলের নির্দিষ্ট ধাপে প্রেরণ করে।</p>
     </div>
 
-    <div class="pair" aria-hidden="true">
-      <div class="pair-node"><span class="dev"><svg width="30" height="30"><use href="#i-phone"/></svg></span>ফোন</div>
-      <span class="pair-line"></span>
-      <span class="pair-ai">AI</span>
-      <span class="pair-line"></span>
-      <div class="pair-node"><span class="dev"><svg width="32" height="32"><use href="#i-monitor"/></svg></span>কম্পিউটার</div>
+    <div class="doc-chips">
+      <span><svg width="13" height="13"><use href="#i-check"/></svg>জাতীয় পরিচয়পত্র, পাসপোর্ট ও জন্মনিবন্ধন</span>
+      <span><svg width="13" height="13"><use href="#i-check"/></svg>দাতা, গ্রহীতা, অভিভাবক, সাক্ষী ও সনাক্তকারী</span>
+      <span><svg width="13" height="13"><use href="#i-check"/></svg>বায়া দলিল ও মালিকানার বিবরণ</span>
+      <span><svg width="13" height="13"><use href="#i-check"/></svg>চৌহদ্দি</span>
+      <span><svg width="13" height="13"><use href="#i-check"/></svg>দাখিলা ও নামজারি খতিয়ানের QR</span>
     </div>
 
     <ol class="steps">
       <li class="step">
-        <div class="step-top">
-          <span class="step-ico"><svg width="20" height="20"><use href="#i-qr"/></svg></span>
-          <span class="where"><svg width="11" height="11"><use href="#i-phone"/></svg>ফোনে</span>
-        </div>
+        <div class="step-top"><span class="step-ico"><svg width="20" height="20"><use href="#i-qr"/></svg></span><span class="where"><svg width="11" height="11"><use href="#i-phone"/></svg>ফোনে</span></div>
         <span class="step-num">ধাপ ১</span>
-        <h3>অ্যাপ সংযুক্তকরণ</h3>
-        <p>কম্পিউটারে সংশ্লিষ্ট দলিল খুলে “মোবাইল স্ক্যান” অংশে প্রদর্শিত QR কোডটি অ্যাপের মাধ্যমে স্ক্যান করুন। এতে ফোনটি ওই দলিলের সাথে সংযুক্ত হবে।</p>
+        <h3>দলিল সংযুক্তকরণ</h3>
+        <p>কম্পিউটারে দলিল খুলে “মোবাইল স্ক্যান” অংশে প্রদর্শিত QR কোডটি অ্যাপের দলিলসেবা AI থেকে স্ক্যান করুন। ফোনটি ওই দলিলের সাথে সংযুক্ত হবে।</p>
       </li>
       <li class="step">
-        <div class="step-top">
-          <span class="step-ico"><svg width="20" height="20"><use href="#i-id"/></svg></span>
-          <span class="where"><svg width="11" height="11"><use href="#i-phone"/></svg>ফোনে</span>
-        </div>
+        <div class="step-top"><span class="step-ico"><svg width="20" height="20"><use href="#i-id"/></svg></span><span class="where"><svg width="11" height="11"><use href="#i-phone"/></svg>ফোনে</span></div>
         <span class="step-num">ধাপ ২</span>
         <h3>নথি স্ক্যান</h3>
-        <p>দাতা ও গ্রহীতার জাতীয় পরিচয়পত্রের ছবি গ্রহণ করুন অথবা গ্যালারি থেকে নির্বাচন করুন; দাখিলা বা নামজারি খতিয়ানের QR কোড স্ক্যান করুন।</p>
+        <p>পক্ষগণের জাতীয় পরিচয়পত্রের ছবি গ্রহণ করুন অথবা গ্যালারি থেকে নির্বাচন করুন; দাখিলা ও নামজারি খতিয়ানের QR কোড স্ক্যান করুন।</p>
       </li>
       <li class="step">
-        <div class="step-top">
-          <span class="step-ico"><svg width="20" height="20"><use href="#i-send"/></svg></span>
-          <span class="where">ফোন <svg width="11" height="11"><use href="#i-arrow"/></svg> কম্পিউটার</span>
-        </div>
+        <div class="step-top"><span class="step-ico"><svg width="20" height="20"><use href="#i-send"/></svg></span><span class="where">ফোন <svg width="11" height="11"><use href="#i-arrow"/></svg> কম্পিউটার</span></div>
         <span class="step-num">ধাপ ৩</span>
         <h3>তথ্য প্রেরণ</h3>
         <p>AI নাম, ঠিকানা, দাগ ও খতিয়ানের তথ্য শনাক্ত করে এবং তা সরাসরি দলিলের সংশ্লিষ্ট ধাপে প্রেরণ করে।</p>
       </li>
       <li class="step last">
-        <div class="step-top">
-          <span class="step-ico"><svg width="20" height="20"><use href="#i-doc-ok"/></svg></span>
-          <span class="where pc"><svg width="11" height="11"><use href="#i-monitor"/></svg>কম্পিউটারে</span>
-        </div>
+        <div class="step-top"><span class="step-ico"><svg width="20" height="20"><use href="#i-doc-ok"/></svg></span><span class="where pc"><svg width="11" height="11"><use href="#i-monitor"/></svg>কম্পিউটারে</span></div>
         <span class="step-num">ধাপ ৪</span>
         <h3>যাচাই ও মুদ্রণ</h3>
-        <p>কম্পিউটারে প্রাপ্ত তথ্য যাচাই করে “যোগ করুন” নির্বাচন করুন। এরপর দলিলটি মুদ্রণের জন্য প্রস্তুত।</p>
+        <p>প্রাপ্ত তথ্য মিলিয়ে দেখে “যোগ করুন” নির্বাচন করুন। এরপর দলিলটি মুদ্রণের জন্য প্রস্তুত।</p>
       </li>
     </ol>
+
+    <div class="trust">
+      <div><svg width="16" height="16"><use href="#i-shield"/></svg><span>দাখিলা ও নামজারি খতিয়ানের QR থেকে কাগজটি বৈধ কি না তাৎক্ষণিকভাবে যাচাই করা হয়।</span></div>
+      <div><svg width="16" height="16"><use href="#i-check"/></svg><span>তথ্য শনাক্ত না হলে AI ব্যালেন্স থেকে কোনো মূল্য কর্তন করা হয় না।</span></div>
+      <div><svg width="16" height="16"><use href="#i-check"/></svg><span>স্ক্যান সম্পন্ন হলে ছবিগুলো ফোন থেকে মুছে যায়।</span></div>
+    </div>
+    <p class="note">AI-পঠিত তথ্যে ভুল থাকতে পারে; দলিলে যুক্ত করার পূর্বে অনুগ্রহ করে মূল নথির সাথে মিলিয়ে নিন। AI স্ক্যানের জন্য ইন্টারনেট সংযোগ ও AI ব্যালেন্স প্রয়োজন।</p>
   </div>
 </section>
 
-<!-- ═══ Features ═══ -->
+<!-- ═══ Desktop features ═══ -->
 <section class="block alt" id="features">
   <div class="wrap">
     <div class="sec-head">
@@ -461,72 +200,199 @@
     <div class="features">
       <div class="feat">
         <span class="f-ico"><svg width="20" height="20"><use href="#i-docs"/></svg></span>
-        <h3>৩২ ধরনের দলিল</h3>
-        <p>প্রচলিত সকল সম্পত্তি-দলিলের প্রস্তুতকৃত টেমপ্লেট এবং যথাযথ আইনি বিন্যাসে মুদ্রণ।</p>
-        <span class="on">ডেস্কটপ</span>
+        <h3>৩৫টিরও বেশি ধরনের দলিল</h3>
+        <p>হস্তান্তর, পাওয়ার অব অ্যাটর্নি, চুক্তি ও জামানত, রহিতকরণ, ঘোষণা, ইজারা ও ট্রাস্টসহ সকল প্রচলিত শ্রেণীর দলিল — যেমন সাফ-কবলা, দানপত্র, হেবা, বণ্টননামা ও বায়নাপত্র।</p>
+      </div>
+      <div class="feat">
+        <span class="f-ico"><svg width="20" height="20"><use href="#i-form"/></svg></span>
+        <h3>তল্লাশ, নকল ও এলটি নোটিশ</h3>
+        <p>তল্লাশ/পরিদর্শন (ফরম ১৫৩৫), নকল (ফরম ১৫৮০) এবং এলটি নোটিশ (ফরম নং-৪) ও ফিসের বিবরণী প্রস্তুত; দলিলের সাধারণ ও শরীকের নোটিশ মুদ্রণ।</p>
+      </div>
+      <div class="feat">
+        <span class="f-ico"><svg width="20" height="20"><use href="#i-print"/></svg></span>
+        <h3>স্ট্যাম্প পেপারে সরাসরি মুদ্রণ</h3>
+        <p>স্ট্যাম্প পেপার, স্ট্যাম্প ও কার্ট্রিজ, সম্পূর্ণ কার্ট্রিজ এবং সার্টিফাইড কপি বিন্যাস। ইনস্টলার Windows-এ “Stamp Paper” পৃষ্ঠার মাপ যুক্ত করে; প্রতিটি কম্পিউটারের প্রিন্টার ও কাগজের সেটিং সংরক্ষিত থাকে।</p>
       </div>
       <div class="feat">
         <span class="f-ico"><svg width="20" height="20"><use href="#i-offline"/></svg></span>
-        <h3>অফলাইন কার্যক্রম ও মুদ্রণ</h3>
-        <p>ইন্টারনেট সংযোগ ছাড়াই দলিল প্রস্তুত ও মুদ্রণ করা যায়; সকল দলিল আপনার কম্পিউটারেই সংরক্ষিত থাকে।</p>
-        <span class="on">ডেস্কটপ</span>
-      </div>
-      <div class="feat">
-        <span class="f-ico"><svg width="20" height="20"><use href="#i-spark"/></svg></span>
-        <h3>দলিলসেবা AI স্ক্যান</h3>
-        <p>জাতীয় পরিচয়পত্র, দাখিলা ও খতিয়ান থেকে নাম, ঠিকানা, দাগ ও খতিয়ান নম্বর স্বয়ংক্রিয়ভাবে পূরণ।</p>
-        <span class="on">মোবাইল + ডেস্কটপ</span>
+        <h3>সম্পূর্ণ অফলাইন কার্যক্রম</h3>
+        <p>ইন্টারনেট ছাড়াই দলিল ও আবেদন প্রস্তুত, সম্পাদনা এবং খসড়া মুদ্রণ করা যায়। অফলাইন ক্রেডিট বা লাইফটাইম প্যাকেজ থাকলে চূড়ান্ত দলিলও মুদ্রণ করা যায়।</p>
       </div>
       <div class="feat">
         <span class="f-ico"><svg width="20" height="20"><use href="#i-sync"/></svg></span>
-        <h3>সমন্বিত সিঙ্ক</h3>
-        <p>ওয়েবসাইট বা অন্য কম্পিউটারে প্রস্তুতকৃত নকল, তল্লাশ ও এলটি নোটিশ স্বয়ংক্রিয়ভাবে এই কম্পিউটারেও পাওয়া যায়।</p>
-        <span class="on">ডেস্কটপ</span>
+        <h3>ক্লাউড সিঙ্ক</h3>
+        <p>অফলাইনে করা পরিবর্তন সংযোগ পেলে স্বয়ংক্রিয়ভাবে সার্ভারে সিঙ্ক হয়। একই অ্যাকাউন্টে ওয়েব বা অন্য কম্পিউটারে করা দলিল, তল্লাশ, নকল ও এলটি নোটিশ এখানেও পাওয়া যায়।</p>
+      </div>
+      <div class="feat">
+        <span class="f-ico"><svg width="20" height="20"><use href="#i-shield"/></svg></span>
+        <h3>স্বয়ংক্রিয় ব্যাকআপ ও পুনরুদ্ধার</h3>
+        <p>প্রতিদিন প্রথমবার চালু করার সময় ও লগআউটে স্বয়ংক্রিয় ব্যাকআপ, নিজস্ব ফোল্ডার নির্বাচন ও পুনরুদ্ধার উইজার্ড। ঐচ্ছিকভাবে PDF-এর Google Drive ব্যাকআপ।</p>
+      </div>
+      <div class="feat">
+        <span class="f-ico"><svg width="20" height="20"><use href="#i-bolt"/></svg></span>
+        <h3>দ্রুত দলিল ও ধাপভিত্তিক উইজার্ড</h3>
+        <p>এক পৃষ্ঠায় সম্পূর্ণ দলিল প্রস্তুতের “দ্রুত দলিল”, ধাপে ধাপে “নতুন দলিল” উইজার্ড এবং মোবাইল স্ক্যানসহ “AI দিয়ে তৈরি”। বিজয় ফরম্যাটের লেখা পেস্ট করেও তথ্য পূরণ করা যায়।</p>
       </div>
       <div class="feat">
         <span class="f-ico"><svg width="20" height="20"><use href="#i-book"/></svg></span>
-        <h3>তথ্য সেবা</h3>
-        <p>বাজারমূল্য, মৌজা তালিকা, আইন ও বিধিমালা, নমুনা ফরম এবং অফিসের তালিকা একত্রে উপলব্ধ।</p>
-        <span class="on">মোবাইল</span>
+        <h3>অন্তর্নির্মিত তথ্যভান্ডার</h3>
+        <p>মৌজা, ভূমি শ্রেণী, বাজারমূল্য ও দলিল লেখকের তালিকা কম্পিউটারেই সংরক্ষিত ও সার্ভার থেকে হালনাগাদ থাকে; সাথে দলিল পেডিয়া, আইন, প্রজ্ঞাপন ও নমুনা ফরম।</p>
       </div>
       <div class="feat">
         <span class="f-ico"><svg width="20" height="20"><use href="#i-update"/></svg></span>
         <h3>স্বয়ংক্রিয় হালনাগাদ</h3>
-        <p>নতুন সংস্করণ প্রকাশিত হলে অ্যাপেই অবহিত করা হয় এবং এক ক্লিকে ইনস্টল করা যায়। মৌজা ও দলিল লেখকের তালিকাও নিয়মিত হালনাগাদ থাকে।</p>
-        <span class="on">মোবাইল + ডেস্কটপ</span>
+        <p>চালু হওয়ার সময় ও প্রতি ছয় ঘণ্টায় নতুন সংস্করণ অনুসন্ধান, পটভূমিতে ডাউনলোড এবং অ্যাপ বন্ধ করার সময় ইনস্টল। “আপডেট ও সিঙ্ক → সিস্টেম আপডেট” থেকে নিজেও পরীক্ষা করা যায়।</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ Install ═══ -->
-<section class="block" id="install">
+<!-- ═══ Mobile app teaser ═══ -->
+<section class="block">
+  <div class="wrap">
+    <div class="promo">
+      <div>
+        <span class="chip"><svg width="13" height="13"><use href="#i-phone"/></svg>মোবাইল অ্যাপ</span>
+        <h2>ডেস্কটপের সহযোগী Android অ্যাপ</h2>
+        <p>দলিলসেবা AI-এর পাশাপাশি অ্যাপে রয়েছে ডকুমেন্ট যাচাই ও ভূমি সংক্রান্ত তথ্যসেবা।</p>
+        <ul>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>NID, বায়া দলিল, চৌহদ্দি এবং দাখিলা ও নামজারি খতিয়ানের AI স্ক্যান</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>দাখিলা, খতিয়ান, এ-চালান, দলিল, জন্ম-মৃত্যু নিবন্ধনসহ ১০ ধরনের ডকুমেন্ট যাচাই</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>বাজারমূল্য, মৌজা তালিকা, আইন ও বিধিমালা, নমুনা ফরম ও দলিল পেডিয়া</li>
+        </ul>
+        <div class="promo-actions">
+          <a class="btn" data-dl="mobile" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk"><svg width="17" height="17"><use href="#i-android"/></svg>Android অ্যাপ ডাউনলোড করুন</a>
+          <a class="link-arrow" href="mobile-app/">অ্যাপের বিস্তারিত <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="promo-side">
+        <div><b>১০</b><span>ধরনের ডকুমেন্ট যাচাই</span></div>
+        <div><b>১টি</b><span>অ্যাকাউন্টে মোবাইল, ডেস্কটপ ও ওয়েব</span></div>
+        <div><b>৩৫৯</b><span>জমির শ্রেণী</span></div>
+        <div><b>৭০০+</b><span>পৃষ্ঠার রেজিস্ট্রেশন ম্যানুয়াল</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Download: full cards + install guide ═══ -->
+<section class="block alt" id="download">
   <div class="wrap">
     <div class="sec-head">
-      <span class="chip">ইনস্টল</span>
-      <h2>ইনস্টলেশন নির্দেশিকা</h2>
+      <span class="chip"><svg width="13" height="13"><use href="#i-download"/></svg>ডাউনলোড</span>
+      <h2>সর্বশেষ সংস্করণ ডাউনলোড করুন</h2>
+      <p>উভয় সফটওয়্যার ইনস্টলের পর স্বয়ংক্রিয়ভাবে হালনাগাদ হয়। মোবাইল, ডেস্কটপ ও ওয়েবে একই অ্যাকাউন্ট ব্যবহৃত হয়।</p>
     </div>
+
+    <div class="dl-grid">
+      <article class="dl-card desktop" data-for="windows">
+        <span class="for-you-tag">আপনার কম্পিউটারের উপযোগী</span>
+        <div class="dl-head">
+          <span class="dl-icon"><svg width="24" height="24"><use href="#i-monitor"/></svg></span>
+          <div class="dl-title"><p class="dl-kind">ডেস্কটপ সফটওয়্যার</p><h3>Windows</h3></div>
+          <span class="ver-pill" data-ver="desktop"></span>
+        </div>
+        <p class="dl-desc">দলিল প্রস্তুত, মুদ্রণ ও সংরক্ষণের মূল সফটওয়্যার।</p>
+        <ul class="checks">
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>৩৫টিরও বেশি ধরনের দলিল, তল্লাশ, নকল ও এলটি নোটিশ</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>মোবাইল স্ক্যানের মাধ্যমে AI-নির্ভর তথ্য পূরণ</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>ইন্টারনেট সংযোগ ছাড়াই দলিল প্রস্তুত ও মুদ্রণ</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>ক্লাউড সিঙ্ক ও স্বয়ংক্রিয় ব্যাকআপ</li>
+        </ul>
+        <div class="spacer"></div>
+        <a class="btn block" data-dl="desktop" href="https://github.com/dolil/dolilsheba-releases/releases/latest"><svg width="18" height="18"><use href="#i-download"/></svg>Windows সংস্করণ ডাউনলোড করুন</a>
+        <p class="dl-meta"><span data-file="desktop">dolilsheba-Setup.exe</span> &middot; <span data-size="desktop"></span> &middot; <span data-date="desktop"></span></p>
+        <div class="req">
+          <span><b>অপারেটিং সিস্টেম:</b> Windows ১০ বা ১১ (64-bit)</span>
+          <span><b>ইন্টারনেট:</b> নিবন্ধন, ক্রেডিট ক্রয়, AI স্ক্যান, সিঙ্ক ও হালনাগাদের জন্য</span>
+        </div>
+        <details class="dl-notes" data-notes="desktop" hidden><summary>এই সংস্করণের পরিবর্তনসমূহ</summary><div class="notes"></div></details>
+      </article>
+
+      <article class="dl-card mobile" data-for="android">
+        <span class="for-you-tag">আপনার ফোনের উপযোগী</span>
+        <div class="dl-head">
+          <span class="dl-icon"><svg width="24" height="24"><use href="#i-phone"/></svg></span>
+          <div class="dl-title"><p class="dl-kind">মোবাইল অ্যাপ</p><h3>Android</h3></div>
+          <span class="ver-pill" data-ver="mobile"></span>
+        </div>
+        <p class="dl-desc">নথি স্ক্যান, ডকুমেন্ট যাচাই ও ভূমি তথ্যসেবার সহায়ক অ্যাপ।</p>
+        <ul class="checks">
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>দলিলসেবা AI-এর মাধ্যমে নথি স্ক্যান ও ডেস্কটপে প্রেরণ</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>QR স্ক্যানে ১০ ধরনের ডকুমেন্ট যাচাই</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>বাজারমূল্য, মৌজা তালিকা, আইন ও নমুনা ফরম</li>
+          <li><svg width="14" height="14"><use href="#i-check"/></svg>অ্যাপের ভেতরেই স্বয়ংক্রিয় হালনাগাদ</li>
+        </ul>
+        <div class="spacer"></div>
+        <a class="btn block" data-dl="mobile" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk"><svg width="18" height="18"><use href="#i-download"/></svg>Android অ্যাপ ডাউনলোড করুন</a>
+        <p class="dl-meta">APK &middot; <span data-size="mobile"></span> &middot; <span data-date="mobile"></span></p>
+        <div class="req">
+          <span><b>অপারেটিং সিস্টেম:</b> Android ৭.০ বা তদূর্ধ্ব</span>
+          <span><b>অনুমতি:</b> ক্যামেরা ও ইন্টারনেট</span>
+        </div>
+        <details class="dl-notes" data-notes="mobile" hidden><summary>এই সংস্করণের পরিবর্তনসমূহ</summary><div class="notes"></div><span class="sha" data-sha="mobile"></span></details>
+      </article>
+    </div>
+
     <div class="install">
       <div class="inst">
         <h3><svg width="22" height="22"><use href="#i-monitor"/></svg>Windows-এ ইনস্টলেশন</h3>
         <ol>
-          <li><span>উপরের <b>Windows সংস্করণ ডাউনলোড করুন</b> বাটনে ক্লিক করুন।</span></li>
-          <li><span>ডাউনলোডকৃত <b>dolilsheba-Setup</b> ফাইলটি চালু করে নির্দেশনা অনুসরণ করুন।</span></li>
-          <li><span>“Windows protected your PC” বার্তা প্রদর্শিত হলে <b>More info → Run anyway</b> নির্বাচন করুন।</span></li>
-          <li><span>ডেস্কটপের শর্টকাট থেকে সফটওয়্যারটি চালু করে লগইন করুন।</span></li>
+          <li><span><b>Windows সংস্করণ ডাউনলোড করুন</b> বাটনে ক্লিক করে ইনস্টলার নামান।</span></li>
+          <li><span>ফাইলটি চালু করুন। “Windows protected your PC” বার্তা প্রদর্শিত হলে <b>More info → Run anyway</b> নির্বাচন করুন।</span></li>
+          <li><span>প্রশাসনিক অনুমতি চাওয়া হলে <b>Yes</b> নির্বাচন করুন; প্রয়োজনে ইনস্টলের ফোল্ডার পরিবর্তন করা যায়।</span></li>
+          <li><span>ডেস্কটপের <b>“দলিল সেবা”</b> শর্টকাট থেকে সফটওয়্যারটি চালু করে লগইন করুন। নতুন ব্যবহারকারী মোবাইল নম্বর ও OTP দিয়ে নিবন্ধন করতে পারবেন।</span></li>
         </ol>
-        <p class="req">Windows 10 / 11 (64-bit) &middot; প্রায় ২০০ MB সংরক্ষণ স্থান &middot; লাইসেন্স, সিঙ্ক ও হালনাগাদের জন্য ইন্টারনেট সংযোগ</p>
       </div>
       <div class="inst">
         <h3><svg width="22" height="22"><use href="#i-phone"/></svg>Android-এ ইনস্টলেশন</h3>
         <ol>
           <li><span>ফোন থেকে <b>Android অ্যাপ ডাউনলোড করুন</b> বাটনে চাপুন।</span></li>
           <li><span>ডাউনলোডকৃত ফাইলটি খুলুন। প্রথমবার <b>“অজানা উৎস থেকে ইনস্টল”</b>-এর অনুমতি চাওয়া হলে তা প্রদান করুন।</span></li>
-          <li><span><b>Install</b> নির্বাচন করে অ্যাপটি চালু করুন এবং লগইন করুন।</span></li>
-          <li><span>কম্পিউটারের <b>মোবাইল স্ক্যান</b> অংশের QR কোড স্ক্যান করে সংশ্লিষ্ট দলিলের সাথে সংযুক্ত করুন।</span></li>
+          <li><span><b>Install</b> নির্বাচন করুন। অ্যাপটি ফোনে <b>“দলিল সেবা”</b> নামে ইনস্টল হবে।</span></li>
+          <li><span>মোবাইল নম্বর ও OTP দিয়ে লগইন করে মেনু থেকে <b>দলিলসেবা AI</b> নির্বাচন করুন।</span></li>
         </ol>
-        <p class="req">Android ৭.০ বা তদূর্ধ্ব &middot; স্ক্যান ও তথ্য প্রেরণের জন্য ইন্টারনেট সংযোগ</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="chip">সাধারণ জিজ্ঞাসা</span>
+      <h2>প্রায়শই জিজ্ঞাসিত প্রশ্ন</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>ইন্টারনেট সংযোগ ছাড়া সফটওয়্যারটি ব্যবহার করা যাবে কি?</summary>
+        <p>হ্যাঁ। এই কম্পিউটারে একবার লগইন করার পর ইন্টারনেট ছাড়াই লগইন, দলিল ও আবেদন প্রস্তুত, সম্পাদনা এবং খসড়া মুদ্রণ করা যায়। অফলাইন ক্রেডিট বা সক্রিয় লাইফটাইম প্যাকেজ থাকলে চূড়ান্ত দলিলও মুদ্রণ করা যায়। সংযোগ পাওয়ার পর পরিবর্তনগুলো স্বয়ংক্রিয়ভাবে সিঙ্ক হয়। নিবন্ধন, ক্রেডিট ক্রয়, AI স্ক্যান ও ফোন সংযুক্তকরণের জন্য ইন্টারনেট প্রয়োজন।</p>
+      </details>
+      <details>
+        <summary>ইনস্টলের সময় “Windows protected your PC” বার্তা দেখাচ্ছে কেন?</summary>
+        <p>ইনস্টলারটি এখনো ডিজিটাল কোড-সাইনিং সনদপ্রাপ্ত নয়, তাই Windows SmartScreen প্রথমবার সতর্কবার্তা দেখায়। শুধু এই পাতা বা dolilsheba.com থেকে ডাউনলোডকৃত ইনস্টলারের ক্ষেত্রে <b>More info → Run anyway</b> নির্বাচন করে ইনস্টল সম্পন্ন করুন।</p>
+      </details>
+      <details>
+        <summary>সফটওয়্যার কীভাবে হালনাগাদ হয়?</summary>
+        <p>ডেস্কটপ সফটওয়্যার চালু হওয়ার সময় ও প্রতি ছয় ঘণ্টায় নতুন সংস্করণ অনুসন্ধান করে, পটভূমিতে ডাউনলোড করে এবং অ্যাপ বন্ধ করার সময় ইনস্টল করে। “আপডেট ও সিঙ্ক → সিস্টেম আপডেট” থেকে নিজেও পরীক্ষা ও ইনস্টল করা যায়। মোবাইল অ্যাপ নতুন সংস্করণ এলে অবহিত করে এবং অ্যাপের ভেতর থেকেই হালনাগাদ করা যায়।</p>
+      </details>
+      <details>
+        <summary>ডেস্কটপ, ওয়েব ও মোবাইলে কি একই অ্যাকাউন্ট?</summary>
+        <p>হ্যাঁ। মোবাইল নম্বর দিয়ে খোলা একটি অ্যাকাউন্ট ডেস্কটপ সফটওয়্যার, ওয়েব অ্যাপ ও মোবাইল অ্যাপে ব্যবহার করা যায়। অ্যাকাউন্ট খোলার সময় মোবাইল নম্বর OTP দিয়ে যাচাই করা হয়।</p>
+      </details>
+      <details>
+        <summary>দলিলের তথ্য কোথায় সংরক্ষিত থাকে?</summary>
+        <p>সকল দলিল আপনার কম্পিউটারে সংরক্ষিত থাকে এবং সিঙ্কের মাধ্যমে সুরক্ষিত সার্ভারে ব্যাকআপ হয়, যাতে একাধিক ডিভাইস থেকে ব্যবহার করা যায়। এছাড়া কম্পিউটারে স্বয়ংক্রিয় স্থানীয় ব্যাকআপ এবং ঐচ্ছিক Google Drive ব্যাকআপের সুবিধা রয়েছে।</p>
+      </details>
+      <details>
+        <summary>AI দিয়ে পূরণকৃত তথ্য কি সম্পূর্ণ নির্ভুল?</summary>
+        <p>AI অধিকাংশ ক্ষেত্রে সঠিকভাবে তথ্য শনাক্ত করে, তবে ভুল হওয়ার সম্ভাবনা থাকে। তাই প্রতিটি তথ্য “যোগ করুন” নির্বাচনের আগে মূল নথির সাথে মিলিয়ে নেওয়া আবশ্যক। তথ্য শনাক্ত না হলে কোনো মূল্য কর্তন করা হয় না।</p>
+      </details>
+      <details>
+        <summary>প্যাকেজ ও মূল্য সম্পর্কে কোথায় জানা যাবে?</summary>
+        <p>প্যাকেজ, ক্রেডিট ও AI ব্যালেন্স সংক্রান্ত হালনাগাদ তথ্য <a class="link-arrow" href="https://dolilsheba.com/packages" target="_blank" rel="noopener">dolilsheba.com/packages</a> পাতায় পাওয়া যাবে।</p>
+      </details>
     </div>
   </div>
 </section>
@@ -536,12 +402,14 @@
   <div class="cta">
     <h2>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম</h2>
     <p>ডেস্কটপ সফটওয়্যার ও মোবাইল অ্যাপের সর্বশেষ সংস্করণ ডাউনলোড করুন</p>
-    <div class="cta-btns">
-      <a class="btn" data-dl="desktop" href="https://github.com/dolil/dolilsheba-releases/releases/latest">
-        <svg width="18" height="18"><use href="#i-monitor"/></svg> Windows সংস্করণ ডাউনলোড করুন
+    <div class="get-btns">
+      <a class="get" data-dl="desktop" href="https://github.com/dolil/dolilsheba-releases/releases/latest">
+        <span class="g-ico"><svg width="18" height="18"><use href="#i-windows"/></svg></span>
+        <span class="g-txt"><small>Windows ১০ / ১১</small><b>ডেস্কটপ সফটওয়্যার</b></span>
       </a>
-      <a class="btn ghost" data-dl="mobile" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk">
-        <svg width="18" height="18"><use href="#i-phone"/></svg> Android অ্যাপ ডাউনলোড করুন
+      <a class="get ghost" data-dl="mobile" href="https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk">
+        <span class="g-ico"><svg width="18" height="18"><use href="#i-android"/></svg></span>
+        <span class="g-txt"><small>Android ৭.০+</small><b>মোবাইল অ্যাপ</b></span>
       </a>
     </div>
   </div>
@@ -549,167 +417,35 @@
 
 <footer>
   <div class="wrap">
-    <span>© ২০২৪–২০২৬ Upakul Dolil Sheba, সিলেট</span>
-    <span class="links">
-      <a href="https://dolilsheba.com" target="_blank" rel="noopener">dolilsheba.com</a>
-      <a href="mailto:dolilsheba@gmail.com">dolilsheba@gmail.com</a>
-      <a href="https://github.com/dolil/dolilsheba-releases" target="_blank" rel="noopener">GitHub</a>
-    </span>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="./"><img src="logo.svg" alt="" width="34" height="34" /><span class="brand-text"><b>SDMS</b><span>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম</span></span></a>
+        <p>উপকূল দলিল সেবা কর্তৃক প্রস্তুত ও পরিচালিত, সিলেট, বাংলাদেশ।</p>
+      </div>
+      <div>
+        <h4>ডাউনলোড</h4>
+        <ul>
+          <li><a href="#download">ডেস্কটপ সফটওয়্যার (Windows)</a></li>
+          <li><a href="mobile-app/">মোবাইল অ্যাপ (Android)</a></li>
+          <li><a href="https://github.com/dolil/dolilsheba-releases/releases" target="_blank" rel="noopener">পূর্ববর্তী সংস্করণসমূহ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>যোগাযোগ</h4>
+        <ul>
+          <li><a href="https://dolilsheba.com" target="_blank" rel="noopener">dolilsheba.com</a></li>
+          <li><a href="mailto:dolilsheba@gmail.com">dolilsheba@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/dolilsheba" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.youtube.com/@dolilsheba" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <span>দলিল সেবা একটি বেসরকারি সেবা — বাংলাদেশ সরকার বা তার কোনো সংস্থার সাথে সংশ্লিষ্ট নয়।</span>
+      <span>© ২০২৪–২০২৬ উপকূল দলিল সেবা</span>
+    </div>
   </div>
 </footer>
 
-<script>
-const REPO = "dolil/dolilsheba-releases";
-
-// Where the release metadata comes from, in order of preference.
-//
-// `latest.json` (desktop) and `mobile.json` (Android) are written next to this page by CI
-// (.github/workflows/update-latest.yml). They are served from this origin, so they are free
-// and cannot be throttled. The GitHub API is the desktop fallback only: anonymous callers get
-// 60 requests per hour PER IP, and every request after that is answered 403 for the rest of
-// the hour — an office behind one NAT address exhausts that easily.
-//
-// Every download button already has a working href in the HTML (GitHub's /releases/latest
-// and the fixed-name dolilsheba.apk), so the page works even if both feeds fail; the
-// script only upgrades them to the exact file, version and size.
-const FEED = "./latest.json";
-const API = `https://api.github.com/repos/${REPO}/releases/latest`;
-const MOBILE_FEED = "./mobile.json";
-const MOBILE_REPO_URL = "https://github.com/dolil/dolilsheba-mobile-releases/";
-
-// Point the visitor at their own platform first.
-(function highlightPlatform() {
-  const ua = navigator.userAgent || "";
-  if (/Android/i.test(ua)) {
-    document.body.classList.add("android");
-    document.getElementById("card-mobile").classList.add("for-you");
-  } else if (/Windows/i.test(ua)) {
-    document.getElementById("card-desktop").classList.add("for-you");
-  }
-})();
-
-function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, c => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-  }[c]));
-}
-const BN = "০১২৩৪৫৬৭৮৯";
-function bn(s) { return String(s).replace(/\d/g, d => BN[d]); }
-function formatSize(b) {
-  if (!b) return "";
-  if (b < 1048576) return bn((b / 1024).toFixed(1)) + " KB";
-  if (b < 1073741824) return bn((b / 1048576).toFixed(1)) + " MB";
-  return bn((b / 1073741824).toFixed(2)) + " GB";
-}
-function formatDate(iso) {
-  if (!iso) return "";
-  return new Date(iso).toLocaleDateString("bn-BD", { year: "numeric", month: "long", day: "numeric" });
-}
-function cleanVersion(v) { return String(v || "").replace(/^v/i, ""); }
-
-// Release notes are Markdown (## headings, - bullets, **bold**). Everything is escaped FIRST,
-// then only these few tags are added back — nothing in the notes can inject markup.
-function renderNotes(src) {
-  const out = [];
-  let inList = false;
-  const inline = s => s
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/`([^`]+)`/g, "<code>$1</code>");
-  for (const raw of escapeHtml(src).split(/\r?\n/)) {
-    const line = raw.trim();
-    const li = line.match(/^[-*]\s+(.*)$/);
-    if (li) {
-      if (!inList) { out.push("<ul>"); inList = true; }
-      out.push(`<li>${inline(li[1])}</li>`);
-      continue;
-    }
-    if (inList) { out.push("</ul>"); inList = false; }
-    if (!line || /^-{3,}$/.test(line)) continue;
-    const h = line.match(/^#{1,6}\s+(.*)$/);
-    out.push(h ? `<h4>${inline(h[1])}</h4>` : `<p>${inline(line)}</p>`);
-  }
-  if (inList) out.push("</ul>");
-  return out.join("");
-}
-
-function setButtons(kind, url) {
-  document.querySelectorAll(`[data-dl="${kind}"]`).forEach(a => { a.href = url; });
-}
-function showNotes(id, md) {
-  const box = document.getElementById(id);
-  if (!md) return;
-  box.querySelector(".notes").innerHTML = renderNotes(md);
-  box.hidden = false;
-}
-
-// ── Desktop (this repo) ──
-// Only the Windows installer (e.g. dolilsheba-Setup-2.0.22.exe) — never the blockmap or latest.yml.
-function pickSetupAsset(release) {
-  const assets = release.assets || [];
-  return assets.find(a => /setup.*\.exe$/i.test(a.name))
-      || assets.find(a => /\.exe$/i.test(a.name))
-      || null;
-}
-
-async function fetchLatest() {
-  try {
-    // Cache-busted so a fresh release shows up without waiting out the CDN's TTL.
-    const res = await fetch(`${FEED}?t=${Date.now()}`, { cache: "no-store" });
-    if (res.ok) {
-      const data = await res.json();
-      if (data && Array.isArray(data.assets)) return data;
-    }
-  } catch (err) {
-    console.warn("Static release feed unavailable, falling back to the API:", err);
-  }
-  const res = await fetch(API, { headers: { Accept: "application/vnd.github+json" } });
-  if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
-  return res.json();
-}
-
-async function loadDesktop() {
-  try {
-    const r = await fetchLatest();
-    const setup = pickSetupAsset(r);
-    document.getElementById("ver-desktop").textContent = "v" + bn(cleanVersion(r.name || r.tag_name));
-    if (setup) {
-      setButtons("desktop", setup.browser_download_url);
-      document.getElementById("meta-desktop").innerHTML =
-        `${escapeHtml(setup.name)} &middot; ${formatSize(setup.size)} &middot; ${formatDate(r.published_at)}`;
-    }
-    showNotes("notes-desktop", (r.body || "").trim());
-  } catch (err) {
-    // The buttons keep their /releases/latest link — still a working download.
-    console.warn("Could not load desktop release metadata:", err);
-  }
-}
-
-// ── Android (dolil/dolilsheba-mobile-releases) ──
-// That repo's latest.json is a release ASSET, and GitHub release downloads carry no CORS
-// headers, so CI copies it here as mobile.json.
-async function loadMobile() {
-  try {
-    const res = await fetch(`${MOBILE_FEED}?t=${Date.now()}`, { cache: "no-store" });
-    if (!res.ok) return;
-    const m = await res.json();
-    const apk = (m && m.apk) || {};
-    // Only ever link to an APK published in the dolilsheba mobile releases repo.
-    if (!String(apk.url || "").startsWith(MOBILE_REPO_URL)) return;
-    setButtons("mobile", apk.url);
-    if (m.version) document.getElementById("ver-mobile").textContent = "v" + bn(m.version);
-    document.getElementById("meta-mobile").innerHTML =
-      [`Android ${escapeHtml(bn(m.min_android || "7.0"))}+`, formatSize(apk.size), formatDate(m.published_at)]
-        .filter(Boolean).join(" &middot; ");
-    if (apk.sha256) document.getElementById("sha-mobile").textContent = "SHA-256: " + apk.sha256;
-    showNotes("notes-mobile", (m.notes || "").trim());
-  } catch (err) {
-    console.warn("Android release feed unavailable:", err);
-  }
-}
-
-loadDesktop();
-loadMobile();
-</script>
-
+<script src="assets/release.js"></script>
 </body>
 </html>
