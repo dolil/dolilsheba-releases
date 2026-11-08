@@ -178,7 +178,7 @@ as anonymous API access is limited to 60 requests per hour per IP address.
 ---
 
 <p align="center">
-  Developed and maintained by <strong>Upakul Dolil Sheba</strong>, Sylhet, Bangladesh.<br>
-  <sub>© 2024–2026 Upakul Dolil Sheba. All rights reserved.<br>
+  Developed and maintained by <strong>Dolil Sheba</strong>, Sylhet, Bangladesh.<br>
+  <sub>© 2024–2026 Dolil Sheba. All rights reserved.<br>
   Dolil Sheba is a private service and is not affiliated with the Government of Bangladesh or any of its agencies.</sub>
 </p>
