@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="icon.png" alt="Dolilsheba" width="112" height="112">
+  <img src="icon.png" alt="SDMS" width="112" height="112">
 </p>
 
-<h1 align="center">Dolilsheba · দলিল সেবা</h1>
+<h1 align="center">Smart Deed Management System (SDMS)</h1>
 
 <p align="center">
-  <strong>Smart Deed Management System (SDMS)</strong><br>
-  Desktop software for writing Bengali land deeds, with a companion Android app that scans
-  NID cards and land records straight into the deed.
+  <strong>স্মার্ট দলিল ম্যানেজমেন্ট সিস্টেম</strong><br><br>
+  An <strong>AI-powered</strong> platform for the preparation and management of land deeds in Bangladesh.<br>
+  Documents scanned with the SDMS mobile app are read by AI and entered directly into the deed.
 </p>
 
 <p align="center">
@@ -17,136 +17,143 @@
 </p>
 
 <p align="center">
-  <a href="https://dolil.github.io/dolilsheba-releases/"><strong>⬇️ Download page</strong></a>
+  <a href="https://dolil.github.io/dolilsheba-releases/"><strong>Download Page</strong></a>
   &nbsp;·&nbsp;
   <a href="https://dolilsheba.com">Website</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/dolil/dolilsheba-releases/releases">All versions</a>
+  <a href="https://github.com/dolil/dolilsheba-releases/releases">Release History</a>
 </p>
 
 ---
 
 ## Download
 
-| | Platform | Get it |
+| Component | Platform | Download |
 |---|---|---|
-| 🖥️ **Desktop software** | Windows 10 / 11 (64-bit) | [**Download installer (.exe)**](https://dolil.github.io/dolilsheba-releases/) |
-| 📱 **Mobile app** | Android 7.0 or newer | [**Download APK**](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk) |
+| **Desktop Software** | Windows 10 / 11 (64-bit) | [**Windows Installer (.exe)**](https://dolil.github.io/dolilsheba-releases/) |
+| **Mobile Application** | Android 7.0 or later | [**Android Application (.apk)**](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk) |
 
-The [download page](https://dolil.github.io/dolilsheba-releases/) always points at the newest
-version of both, with release notes.
+The [download page](https://dolil.github.io/dolilsheba-releases/) always provides the latest
+version of both components, together with their release notes.
 
-## What's included
+## Overview
 
-### 🖥️ Desktop software (Windows)
+### Desktop Software (Windows)
 
-The main workspace for deed writers, lawyers, real estate companies and banks.
+The primary application for deed preparation, designed for deed writers, legal practitioners,
+real estate firms and banking institutions.
 
-- **32 types** of Bengali land deed documents, with ready templates for common property deeds
-- Print-ready output with proper legal formatting
-- **Works offline**: write and print deeds without internet; it's only needed for license and sync
-- **নকল, তল্লাশ ও এলটি নোটিশ** sync between your computer and the website
-- Mouza and deed-writer lists stay current from the server automatically
-- Your deeds are stored locally on your computer
-- **Updates itself**: new versions download and install in one click
+- **AI-assisted data entry:** party and land details are populated automatically from scanned documents
+- **32 deed types**, with prepared templates for all commonly used property deeds
+- Print-ready output in the appropriate legal format
+- **Offline operation:** deeds can be prepared and printed without an internet connection;
+  connectivity is required only for licensing and synchronisation
+- Synchronisation of **নকল, তল্লাশ ও এলটি নোটিশ** between the desktop and the web platform
+- Mouza and deed-writer directories are kept current from the server automatically
+- All deed records are stored locally on the user's computer
+- **Automatic updates:** new versions are downloaded and installed in a single step
 
-### 📱 Mobile app (Android)
+### Mobile Application (Android)
 
-The phone app pairs with the desktop software, so you don't have to type details in by hand.
+The mobile application operates in conjunction with the desktop software and removes the need
+for manual data entry.
 
-- **দলিলসেবা AI scanning**: photograph the parties' NID cards and scan the QR code on a
-  দাখিলা or নামজারি খতিয়ান
-- **Sends to your computer**: names, addresses, দাগ and খতিয়ান numbers land in the right
-  step of the open deed on the desktop. You review them and click **যোগ করুন**
-- **Information services** on the go: market values, mouza lists, laws and rules,
-  sample forms, office directory and document verification
-- Updates itself from this project's releases
+- **দলিলসেবা AI document scanning:** capture the National ID cards of the parties and scan the
+  QR code of a দাখিলা or নামজারি খতিয়ান
+- **Direct transfer to the desktop:** names, addresses, দাগ and খতিয়ান numbers are extracted
+  and delivered to the corresponding step of the open deed, where the user reviews them and
+  confirms with **যোগ করুন**
+- **Reference services:** market values, mouza directory, laws and regulations, sample forms,
+  office directory and document verification
+- Automatic updates from the official release channel
 
-**How they work together**
+### Workflow
 
-```
- ① Phone            ② Phone              ③ Phone → Computer        ④ Computer
- Scan the QR   →    Scan NID and    →    AI reads the details  →   Check, click
- on the deed        দাখিলা / খতিয়ান       and sends them             "যোগ করুন" — done
- ("মোবাইল স্ক্যান")
-```
+| Step | Device | Action |
+|:---:|---|---|
+| 1 | Mobile | Scan the QR code displayed in the **মোবাইল স্ক্যান** section of the deed to link the device |
+| 2 | Mobile | Capture the National ID cards and scan the দাখিলা or খতিয়ান |
+| 3 | Mobile → Desktop | AI extracts the relevant details and transmits them to the deed |
+| 4 | Desktop | Review the extracted details, confirm with **যোগ করুন**, and print |
 
 ## Installation
 
 ### Windows
 
-1. Open the [download page](https://dolil.github.io/dolilsheba-releases/) and click
-   **Windows এর জন্য ডাউনলোড**. You'll get a file named `dolilsheba-Setup-x.y.z.exe`.
-2. Run the installer and follow the steps.
-3. If Windows shows **"Windows protected your PC"**, click **More info → Run anyway**.
-4. Start **Dolilsheba** from the desktop shortcut and sign in.
+1. Open the [download page](https://dolil.github.io/dolilsheba-releases/) and select
+   **Windows সংস্করণ ডাউনলোড করুন**. The installer is named `dolilsheba-Setup-x.y.z.exe`.
+2. Run the installer and follow the on-screen instructions.
+3. If Windows displays **"Windows protected your PC"**, select **More info → Run anyway**.
+4. Launch the software from the desktop shortcut and sign in.
 
 ### Android
 
-1. On your phone, download the
-   [APK](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk).
-2. Open it. The first time, Android asks you to **allow installs from this source**.
-   Allow it, then go back and tap **Install**.
-3. Open **দলিল সেবা**, sign in, and scan the QR code shown in the desktop's
-   **মোবাইল স্ক্যান** section to connect the phone to a deed.
+1. On the mobile device, download the
+   [Android application](https://github.com/dolil/dolilsheba-mobile-releases/releases/latest/download/dolilsheba.apk).
+2. Open the downloaded file. On first installation, Android requests permission to
+   **install from this source**; grant the permission and select **Install**.
+3. Launch the application, sign in, and scan the QR code shown in the **মোবাইল স্ক্যান**
+   section of the desktop software to link the device to a deed.
 
-## System requirements
+## System Requirements
 
-| | Desktop | Mobile |
+| | Desktop Software | Mobile Application |
 |---|---|---|
-| OS | Windows 10 or 11, 64-bit | Android 7.0+ |
-| Storage | ~200 MB | ~90 MB download |
-| Internet | For sign-in, license, sync and updates | For scanning and sending to the desktop |
+| Operating system | Windows 10 or 11, 64-bit | Android 7.0 or later |
+| Storage | Approximately 200 MB | Approximately 90 MB (download) |
+| Internet | Sign-in, licensing, synchronisation and updates | Document scanning and transfer to the desktop |
 
 ## Updates
 
-Both apps check for new versions on their own.
+Both components check for new versions automatically.
 
-- **Desktop**: an update notice appears inside the app. You can also check from
-  **Help → Check for Updates**.
-- **Mobile**: the app tells you when a new version is ready and installs it from here.
+- **Desktop software:** an update notification is shown within the application. Updates may
+  also be checked manually via **Help → Check for Updates**.
+- **Mobile application:** the user is notified when a new version is available, and the update
+  is installed from the official release channel.
 
-Release notes for every version are on the [Releases](https://github.com/dolil/dolilsheba-releases/releases)
-page (desktop) and the [mobile releases](https://github.com/dolil/dolilsheba-mobile-releases/releases)
-page (Android).
+Release notes for each version are published on the
+[desktop releases](https://github.com/dolil/dolilsheba-releases/releases) and
+[mobile releases](https://github.com/dolil/dolilsheba-mobile-releases/releases) pages.
 
-## Verifying downloads
+## Download Verification
 
-Every Android release lists the APK's **SHA-256** in its notes and on the download page.
-All APKs are signed with the same key, with certificate SHA-256:
+The SHA-256 checksum of each Android package is published in its release notes and on the
+download page. All Android packages are signed with the same key; the signing certificate's
+SHA-256 fingerprint is:
 
 ```
 d368f1219204e7beb6589b12455c66347516b64736ed0763ec6e0e6b6560ac83
 ```
 
-Only download installers from this repository, the
+Installers should be obtained only from this repository, the
 [mobile releases](https://github.com/dolil/dolilsheba-mobile-releases) repository, or
 [dolilsheba.com](https://dolilsheba.com).
 
 ## Support
 
-- 🌐 Website: [dolilsheba.com](https://dolilsheba.com)
-- 📧 Email: [dolilsheba@gmail.com](mailto:dolilsheba@gmail.com) · [info@dolilsheba.com](mailto:info@dolilsheba.com)
+- Website: [dolilsheba.com](https://dolilsheba.com)
+- Email: [dolilsheba@gmail.com](mailto:dolilsheba@gmail.com) · [info@dolilsheba.com](mailto:info@dolilsheba.com)
 
-## About this repository
+## About This Repository
 
-This repository holds **release files only**. No source code is hosted here.
-Releases are built and published by CI.
+This repository contains **release files only**; no source code is hosted here. All releases
+are built and published through an automated pipeline.
 
 <details>
-<summary>How the download page stays current</summary>
+<summary>Download page maintenance</summary>
 
-`index.html` is served by GitHub Pages at <https://dolil.github.io/dolilsheba-releases/>.
-It reads two generated files. Don't edit them by hand:
+`index.html` is published through GitHub Pages at <https://dolil.github.io/dolilsheba-releases/>.
+It reads two generated files, which should not be edited manually:
 
-- `latest.json`: the newest published desktop release of this repository
-- `mobile.json`: a copy of `latest.json` from the newest release of
+- `latest.json`: the most recent published desktop release of this repository
+- `mobile.json`: a copy of `latest.json` from the most recent release of
   [`dolil/dolilsheba-mobile-releases`](https://github.com/dolil/dolilsheba-mobile-releases)
 
-[`.github/workflows/update-latest.yml`](.github/workflows/update-latest.yml) rewrites both on
-every release event here and hourly, which is how it picks up Android releases. The page only
-falls back to the GitHub API if `latest.json` is missing, because anonymous API callers share
-a limit of 60 requests an hour per IP address.
+[`.github/workflows/update-latest.yml`](.github/workflows/update-latest.yml) regenerates both
+files on every release event in this repository and on an hourly schedule, which captures new
+Android releases. The page falls back to the GitHub API only when `latest.json` is unavailable,
+as anonymous API access is limited to 60 requests per hour per IP address.
 
 </details>
 
