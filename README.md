@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" alt="SDMS" width="112" height="112">
+  <img src="logo.svg" alt="SDMS" width="104" height="104">
 </p>
 
 <h1 align="center">Smart Deed Management System (SDMS)</h1>
