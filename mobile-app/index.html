@@ -47,14 +47,14 @@
   a.feat:hover { border-color: var(--green); box-shadow: var(--shadow-md); }
   /* Scan groups */
   .groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .group { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-  .group h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; font-size: 16px; }
-  .group h3 span { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--green-tint); color: var(--green-dark); }
-  .group ul { margin: 0; padding-left: 18px; color: var(--soft); font-size: 14px; display: grid; gap: 5px; }
+  .group { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .group h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 8px; font-size: 15.5px; }
+  .group h3 span { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--green-tint); color: var(--green-dark); }
+  .group ul { margin: 0; padding-left: 18px; color: var(--soft); font-size: 14px; display: grid; gap: 3px; }
 
   /* Land QR detail */
-  .landqr { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; margin-top: 16px; background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 26px 28px; }
-  .landqr h3 { margin: 8px 0 8px; font-size: 19px; }
+  .landqr { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; margin-top: 14px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; }
+  .landqr h3 { margin: 6px 0 6px; font-size: 18px; }
   .landqr p { margin: 0 0 12px; color: var(--soft); font-size: 14.5px; }
   .fields { display: flex; flex-wrap: wrap; gap: 7px; }
   .fields span { font-size: 13px; border: 1px solid var(--border); background: var(--surface-alt); border-radius: 8px; padding: 4px 10px; color: var(--soft); }
@@ -65,16 +65,16 @@
   .status.na { background: #f1f5f4; color: #3d4b44; }
 
   /* Verification grid */
-  .verify { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
-  .verify div { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 16px 12px; text-align: center; font-size: 14px; font-weight: 600; color: var(--text); }
-  .verify div span { display: grid; place-items: center; width: 38px; height: 38px; margin: 0 auto 8px; border-radius: 50%; background: var(--green-tint); color: var(--green-dark); }
+  .verify { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .verify div { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px 10px; text-align: center; font-size: 14px; font-weight: 600; color: var(--text); }
+  .verify div span { display: grid; place-items: center; width: 34px; height: 34px; margin: 0 auto 6px; border-radius: 50%; background: var(--green-tint); color: var(--green-dark); }
 
   /* Info tiles */
-  .info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-  .info-grid div { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .info-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .info-grid div { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; }
   .info-grid b { display: block; font-size: 15px; }
   .info-grid span { font-size: 13px; color: var(--muted); }
-  .more-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+  .more-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
   .more-chips span { font-size: 13.5px; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; color: var(--soft); }
 
   /* Download block */
@@ -288,7 +288,7 @@
       </li>
     </ol>
 
-    <div class="groups" style="margin-top:16px">
+    <div class="groups" style="margin-top:14px">
       <div class="group">
         <h3><span><svg width="18" height="18"><use href="#i-users"/></svg></span>পক্ষের জাতীয় পরিচয়পত্র</h3>
         <ul>
