@@ -1,0 +1,91 @@
+name: Update download page feed
+
+# The download page (index.html) must not call api.github.com from the visitor's browser:
+# anonymous callers get 60 requests per hour PER IP across the whole API, and every request
+# after that is answered 403 — the page would break for everyone sharing that address.
+#
+# Instead the page reads two static files from this repo, served by Pages from the same
+# origin, and this job keeps them in step with the releases:
+#
+#   latest.json  — the newest published desktop release of THIS repo.
+#   mobile.json  — a copy of latest.json from the newest release of
+#                  dolil/dolilsheba-mobile-releases. That file is a release asset there, and
+#                  release downloads carry no CORS headers, so the page can't fetch it itself.
+#
+# Desktop releases: electron-builder (dolil/dolilsheba-desktop, desktop-release.yml) uploads a
+# DRAFT with a PAT; publishing that draft in the GitHub UI fires `release` here.
+# Mobile releases happen in another repo and fire nothing here, so the schedule picks them up.
+
+on:
+  release:
+    types: [published, edited, unpublished, deleted, released]
+  schedule:
+    - cron: "17 * * * *"   # hourly — catches new Android releases
+  workflow_dispatch:
+
+concurrency:
+  group: update-latest-feed
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # THE BRANCH, NOT THE TAG. A `release` event checks out the tag it fired for, which is a
+      # detached HEAD — the commit would then fail on `git push`. Pages serves `main`.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Describe the newest published desktop release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # Same shape as the API response the page falls back to, trimmed to the fields it
+          # renders — so index.html handles both sources with one code path.
+          if ! gh api "repos/$GITHUB_REPOSITORY/releases/latest" \
+                --jq '{tag_name, name, published_at, body, assets: [.assets[] | {name, size, browser_download_url}]}' \
+                > latest.json.new; then
+            echo "::warning::No published desktop release — leaving latest.json as it is."
+            rm -f latest.json.new
+            exit 0
+          fi
+          mv latest.json.new latest.json
+
+      - name: Copy the Android app's feed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          # No tag → the repo's latest (non-prerelease) release.
+          if ! gh release download -R dolil/dolilsheba-mobile-releases -p latest.json -O mobile.json.new --clobber; then
+            echo "::warning::No Android release feed — leaving mobile.json as it is."
+            rm -f mobile.json.new
+            exit 0
+          fi
+          # Refuse anything that doesn't point into the mobile releases repo.
+          if ! jq -e '.apk.url | startswith("https://github.com/dolil/dolilsheba-mobile-releases/")' mobile.json.new > /dev/null; then
+            echo "::warning::Android feed looks wrong — leaving mobile.json as it is."
+            rm -f mobile.json.new
+            exit 0
+          fi
+          jq . mobile.json.new > mobile.json
+          rm -f mobile.json.new
+
+      - name: Commit if anything changed
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- latest.json mobile.json)" ]; then
+            echo "Feeds are already current."
+            exit 0
+          fi
+          # Committed as the repo owner, not github-actions[bot], so the repository's contributors
+          # stay the owner alone. The push itself still uses this job's token.
+          git config user.name "dolil"
+          git config user.email "dev.maksu@gmail.com"
+          git add latest.json mobile.json
+          git commit -m "Point the download page at desktop $(jq -r .tag_name latest.json), Android $(jq -r .version mobile.json 2>/dev/null || echo '-')"
+          git push

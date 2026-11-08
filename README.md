@@ -19,7 +19,7 @@
 
 ## Download
 
-➡️ **[Download Latest Version](https://github.com/dolil/dolilsheba-releases/releases/latest)**
+➡️ **[Download page — Windows + Android](https://dolil.github.io/dolilsheba-releases/)** · [Latest release on GitHub](https://github.com/dolil/dolilsheba-releases/releases/latest)
 
 Go to the latest release and download **`Dolilsheba.Setup.x.x.x.exe`**
 
@@ -31,6 +31,19 @@ Go to the latest release and download **`Dolilsheba.Setup.x.x.x.exe`**
 | Architecture | 64-bit (x64) |
 | Disk Space | ~200 MB |
 | Internet | Required for license verification and updates |
+
+### Download page
+
+`index.html` is served by GitHub Pages at https://dolil.github.io/dolilsheba-releases/ and links
+the latest Windows installer and the latest Android APK. It reads two generated files — don't
+hand-edit them:
+
+- `latest.json` — the newest published desktop release of this repo
+- `mobile.json` — copy of `latest.json` from the newest release of `dolil/dolilsheba-mobile-releases`
+
+`.github/workflows/update-latest.yml` rewrites both on every release event here and hourly (to
+pick up Android releases). The page falls back to the GitHub API only if `latest.json` is
+missing, because anonymous API callers share 60 requests an hour per IP address.
 
 ## Features
 
